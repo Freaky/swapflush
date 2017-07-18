@@ -54,8 +54,6 @@ swapflush(char *name)
 {
 	int fd, rc = 0;
 
-	printf("Flush %s\n", name);
-
 	if (-1 == (fd = open(name, O_RDONLY))) {
 		warn("open");
 		return 1;
