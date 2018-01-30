@@ -75,7 +75,7 @@ swapflusheach(int n, char **devs)
 	int i, rc = 0;
 
 	for (i = 0; i < n; i++) {
-		if (!swapflush(devs[i]))
+		if (swapflush(devs[i]))
 			rc = 1;
 	}
 
