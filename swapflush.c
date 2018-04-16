@@ -33,7 +33,7 @@ list(char **devs)
 	mibsize = sizeof mib / sizeof mib[0];
 	if (sysctlnametomib("vm.swap_info", mib, &mibsize) == -1)
 		err(1, "sysctlnametomib()");
-	for (n = 0; ; ++n) {
+	for (n = 0; n < MAX_DEVS; ++n) {
 		mib[mibsize] = n;
 		size = sizeof xsw;
 		if (sysctl(mib, mibsize + 1, &xsw, &size, NULL, 0) == -1)
