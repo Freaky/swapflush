@@ -16,6 +16,10 @@
 
 #define MAX_DEVS 16
 
+#ifdef SWAPOFF_FORCE
+#define swapoff(name) swapoff(name, 0)
+#endif
+
 static void
 usage(void)
 {
