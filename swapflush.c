@@ -23,7 +23,7 @@
 static void
 usage(void)
 {
-	fprintf(stderr, "usage: %s -a | FILE ...", getprogname());
+	fprintf(stderr, "usage: %s -a | FILE ...\n", getprogname());
 	exit(1);
 }
 
