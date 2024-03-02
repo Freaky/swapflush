@@ -8,8 +8,4 @@ swapflush -a | file ...
 
 ## Description
 
-The swapflush utility removes, and re-adds the specified swap devices
-from the system, while ensuring they always remains open to ensure
-detach-on-last-close devices such as geli(8) onetime providers survive
-the process.
-
+The swapflush utility uses [swapon(8)](https://man.freebsd.org/cgi/man.cgi?query=swapon&sektion=8&manpath=freebsd-release) to remove then re-add the specified swap devices, while ensuring that they always remain open — for detach-on-last-close devices such as [geli(8)](https://man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&manpath=freebsd-release) onetime providers to survive the process.
